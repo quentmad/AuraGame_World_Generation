@@ -8,7 +8,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="Code plus propre, ajout de la souris" />
+    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="old">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile$Biome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/aura_game/app/EntityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/aura_game/app/GridTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/aura_game/app/QuadtreeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/build/libs/list.jar" beforeDir="false" afterPath="$PROJECT_DIR$/list/build/libs/list.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/build/libs/utilities.jar" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/build/libs/utilities.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704536200044</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="old">
+      <option name="closed" value="true" />
+      <created>1705576145726</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705576145726</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -193,6 +218,7 @@
     <MESSAGE value="changement vers intellij" />
     <MESSAGE value="Code plus propre..." />
     <MESSAGE value="Code plus propre, ajout de la souris" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code plus propre, ajout de la souris" />
+    <MESSAGE value="old" />
+    <option name="LAST_COMMIT_MESSAGE" value="old" />
   </component>
 </project>
