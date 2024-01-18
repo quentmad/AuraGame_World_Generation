@@ -6,7 +6,7 @@ public class TilesManager {
     private SpriteSheetInfo tilesTexture;
 
     public TilesManager(int TILE_SIZE){
-        this.tilesTexture = new SpriteSheetInfo(TILE_SIZE, "tilesTextureDark");
+        this.tilesTexture = new SpriteSheetInfo(TILE_SIZE, "tilesTexture");
     }
 
     /**

@@ -51,7 +51,10 @@ public class MapManager {
 
 
     /**
-     * Méthode pour dessiner la carte texturée.
+     * Initialise la carte en utilisant l'algorithme de bruit de Perlin pour générer des tuiles en fonction
+     * des paramètres de relief, de type de terrain et de la graine aléatoire actuelle.
+     *
+     * @param z La coordonnée z utilisée dans le bruit de Perlin, influençant la génération de la carte.
      */
     private void initialiseMap(double z) {
         Tile tile;
@@ -83,66 +86,47 @@ public class MapManager {
 
     }
 
-
+    /**
+     * Ajoute des bordures aux tuiles en fonction de leur voisinage dans le tableau 2D de tuiles.
+     *
+     * @param tileset Le tableau 2D de tuiles représentant la carte.
+     */
     private void addBorders(Tile[][] tileset) {
         for (int i = 0; i < nbTilesWidth; ++i) {
             for (int j = 0; j < nbTilesHeight; ++j) {
-
                 Tile tile = tileset[i][j];
 
-                if(tile.getLayer()!= 1) {//Si c'est pas de l'herbe sans bord
-                    // Vérifie la tuile à gauche
-                    if (i > 0) {
-                        if (tileset[i - 1][j].getLayer() != tile.getLayer() &&
-                                tileset[i - 1][j].getBorderTypeTile().equals(BorderType.NOBORDER)) {
-                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.RIGHTBORDER);
-                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.LEFTBORDER);
-
-                        }
-                        /*
-                        if (tileset[i - 1][j].getTextureIndexActual() != tile.getTextureIndexActual() &&
-                                tileset[i - 1][j].getDirectionTile().equals(Direction.NOBORDER)) {
-                            if(tile.getTextureIndexActual() != 0)tileset[i][j] = new Tile(TileType.GRASS,Direction.RIGHT);
-                            else tileset[i][j] = new Tile(TileType.WATER,Direction.LEFT);
-
-                        }*/
-                    }
-
-                    // Vérifie la tuile à droite
-                    if (i < nbTilesWidth - 1) {
-                        if (tileset[i + 1][j].getLayer() != tile.getLayer() &&
-                                tileset[i + 1][j].getBorderTypeTile().equals(BorderType.NOBORDER)) {
-
-                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.LEFTBORDER);
-                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.RIGHTBORDER);
-                        }
-                    }
-
-                    // Vérifie la tuile en haut
-                    if (j > 0) {
-                        if (tileset[i][j - 1].getLayer() != tile.getLayer() &&
-                                tileset[i][j - 1].getBorderTypeTile().equals(BorderType.NOBORDER)) {
-                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.TOPBORDER);
-                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.TOPBORDER);
-                        }
-                    }
-
-                    // Vérifie la tuile en bas
-                    if (j < nbTilesHeight - 1) {
-                        //System.out.println("voisin index: " + tileset[i][j + 1].getIndexTexture());
-                        //System.out.println("currentIndex " + tile.getIndexTexture());
-                        if (tileset[i][j + 1].getLayer() != tile.getLayer() &&
-                                tileset[i][j + 1].getBorderTypeTile().equals(BorderType.NOBORDER)) {
-                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.BOTTOMBORDER);
-                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.BOTTOMBORDER);
-                        }
-                    }
+                if (tile.getLayer() != 1) { // Si ce n'est pas de l'herbe
+                    checkAndSetBorder(tileset, i - 1, j, i, j, tile, BorderType.LEFTBORDER);
+                    checkAndSetBorder(tileset, i + 1, j, i, j, tile, BorderType.RIGHTBORDER);
+                    checkAndSetBorder(tileset, i, j - 1, i, j, tile, BorderType.TOPBORDER);
+                    checkAndSetBorder(tileset, i, j + 1, i, j, tile, BorderType.BOTTOMBORDER);
                 }
             }
         }
     }
 
-    /**Dessine l'ensemble des Tuiles déjà charger dans le tableau2D au préalable*/
+    /**
+     * Vérifie la tuile voisine à une position spécifiée et affecte une bordure à la tuile actuelle si nécessaire.
+     *
+     * @param tileset    Le tableau 2D de tuiles représentant la carte.
+     * @param nx         La position x de la tuile voisine.
+     * @param ny         La position y de la tuile voisine.
+     * @param ox         La position x de la tuile actuelle.
+     * @param oy         La position y de la tuile actuelle.
+     * @param currentTile La tuile actuelle.
+     * @param borderType Le type de bordure à ajouter.
+     */
+    private void checkAndSetBorder(Tile[][] tileset, int nx, int ny, int ox, int oy,Tile currentTile, BorderType borderType) {
+        if(nx >= 0 && nx < nbTilesWidth && ny >= 0 && ny < nbTilesHeight &&
+                tileset[nx][ny].getLayer() != currentTile.getLayer() &&
+                tileset[nx][ny].getBorderTypeTile().equals(BorderType.NOBORDER)) {//Ce n'est pas déjà un bord
+
+            tileset[ox][oy] = new Tile(currentTile.getTileType(), borderType);
+        }
+    }
+
+    /**Dessine l'ensemble des Tuiles déjà chargé dans le tableau2D au préalable*/
     private void drawMap(){
         count++;
         for (int i = 0; i < nbTilesWidth; ++i) {

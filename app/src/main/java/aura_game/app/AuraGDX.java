@@ -8,8 +8,8 @@ public class AuraGDX extends ApplicationAdapter {
 
 
     private MapManager mapManager;
-    private Biome choosenBiome = Biome.PLAINS;//choseRandomBiome();
-    private final int DEFAULT_NB_TILES_WIDTH = 1962 / 16;//1834 / 16;
+    private Biome choosenBiome = choseRandomBiome();
+    private final int DEFAULT_NB_TILES_WIDTH = 1962 / 16;
     private final int DEFAULT_NB_TILES_HEIGHT = 1008 / 16;
 
     private final int TILE_SIZE = 16;

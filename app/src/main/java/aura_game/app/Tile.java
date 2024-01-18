@@ -8,9 +8,11 @@ public class Tile {
     private Map<BorderType, Integer> tiles;  // Indices des textures pour chaque cas (bord ou non)
     //private Map<Biome, Integer> biomeTextures;
     private BorderType borderType;
+    private TileType tileType;
     private int layer;
 
-    public Tile(TileType tileType, BorderType borderType/*int layer*/) {
+    public Tile(TileType tileType, BorderType borderType) {
+        this.tileType = tileType;
         this.tiles = new HashMap<>();
         if(tileType.getTopBorderIndex() == 1){//TODO: c'est un TEST POUR AVOIR 2 HERBES
             if(Math.random() < 0.5){    this.tiles.put(BorderType.NOBORDER, 2);
@@ -54,7 +56,5 @@ public class Tile {
         borderType = border;
     }
 
-
-
-
+    public TileType getTileType() { return tileType;}
 }
