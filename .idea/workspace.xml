@@ -8,23 +8,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="old">
+    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="clean old things">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/BorderType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile$Biome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/App.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/AuraGDX.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/AuraGDX.class.uniqueId1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/aura_game/app/EntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/aura_game/app/GridTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/aura_game/app/QuadtreeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/build/libs/list.jar" beforeDir="false" afterPath="$PROJECT_DIR$/list/build/libs/list.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/build/libs/utilities.jar" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/build/libs/utilities.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,25 +93,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Aura_Game [./gradle run].executor": "Run",
-    "Gradle.Aura_Game [./gradlew run].executor": "Run",
-    "Gradle.Aura_Game [.gradle run].executor": "Run",
-    "Gradle.RUN_Aura_Game.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/quent/Documents/Code/Java/AuraGame_World_Generation",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.30689654",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Aura_Game [./gradle run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Aura_Game [./gradlew run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Aura_Game [.gradle run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RUN_Aura_Game.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/quent/Documents/Code/Java/AuraGame_World_Generation&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.30689654&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\quent\Documents\Code\Java\Aura_Game_World_Generation\app\src\main\java\aura_game\app\GenerationMapS2" />
@@ -197,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705576145726</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="clean old things">
+      <option name="closed" value="true" />
+      <created>1705576195381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705576195381</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -219,6 +238,7 @@
     <MESSAGE value="Code plus propre..." />
     <MESSAGE value="Code plus propre, ajout de la souris" />
     <MESSAGE value="old" />
-    <option name="LAST_COMMIT_MESSAGE" value="old" />
+    <MESSAGE value="clean old things" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean old things" />
   </component>
 </project>

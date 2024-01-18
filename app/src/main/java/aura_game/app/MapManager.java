@@ -63,17 +63,17 @@ public class MapManager {
                 double n = relief * perlinNoise.noise(10 * x, 6 * y, z);//x et y permet d'allonger selon w ou h
                 //System.out.println("n is "+ n);
                 if (n < 0.38) {
-                    tile = new Tile(TileType.WATER, Direction.NOBORDER);
+                    tile = new Tile(TileType.WATER, BorderType.NOBORDER);
                 } else if (n >= 0.38 && n < 0.7) {
-                    tile = new Tile(TileType.GRASS, Direction.NOBORDER);
+                    tile = new Tile(TileType.GRASS, BorderType.NOBORDER);
                 } else if (n >= 0.7 && n < 0.85) {
-                    tile = new Tile(TileType.MOUNTAIN1, Direction.NOBORDER);
+                    tile = new Tile(TileType.MOUNTAIN1, BorderType.NOBORDER);
                 } else if((n >= 0.85 && n < 0.95)){
-                    tile = new Tile(TileType.MOUNTAIN2, Direction.NOBORDER);
+                    tile = new Tile(TileType.MOUNTAIN2, BorderType.NOBORDER);
                 }else if((n >= 0.95 && n < 1.12)){
-                    tile = new Tile(TileType.MOUNTAIN3, Direction.NOBORDER);
+                    tile = new Tile(TileType.MOUNTAIN3, BorderType.NOBORDER);
                 }else{
-                    tile = new Tile(TileType.MOUNTAIN4, Direction.NOBORDER);
+                    tile = new Tile(TileType.MOUNTAIN4, BorderType.NOBORDER);
                 }
 
                 map[i][j] = tile;
@@ -90,33 +90,40 @@ public class MapManager {
 
                 Tile tile = tileset[i][j];
 
-                if(tile.getTextureIndex(Direction.NOBORDER)!= 1) {//Si c'est pas de l'herbe sans bord
+                if(tile.getLayer()!= 1) {//Si c'est pas de l'herbe sans bord
                     // Vérifie la tuile à gauche
                     if (i > 0) {
+                        if (tileset[i - 1][j].getLayer() != tile.getLayer() &&
+                                tileset[i - 1][j].getBorderTypeTile().equals(BorderType.NOBORDER)) {
+                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.RIGHTBORDER);
+                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.LEFTBORDER);
+
+                        }
+                        /*
                         if (tileset[i - 1][j].getTextureIndexActual() != tile.getTextureIndexActual() &&
                                 tileset[i - 1][j].getDirectionTile().equals(Direction.NOBORDER)) {
                             if(tile.getTextureIndexActual() != 0)tileset[i][j] = new Tile(TileType.GRASS,Direction.RIGHT);
                             else tileset[i][j] = new Tile(TileType.WATER,Direction.LEFT);
 
-                        }
+                        }*/
                     }
 
                     // Vérifie la tuile à droite
                     if (i < nbTilesWidth - 1) {
-                        if (tileset[i + 1][j].getTextureIndexActual() != tile.getTextureIndexActual() &&
-                                tileset[i + 1][j].getDirectionTile().equals(Direction.NOBORDER)) {
+                        if (tileset[i + 1][j].getLayer() != tile.getLayer() &&
+                                tileset[i + 1][j].getBorderTypeTile().equals(BorderType.NOBORDER)) {
 
-                            if(tile.getTextureIndexActual() != 0)tileset[i][j] = new Tile(TileType.GRASS, Direction.LEFT);
-                            else tileset[i][j] = new Tile(TileType.WATER, Direction.RIGHT);
+                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.LEFTBORDER);
+                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.RIGHTBORDER);
                         }
                     }
 
                     // Vérifie la tuile en haut
                     if (j > 0) {
-                        if (tileset[i][j - 1].getTextureIndexActual() != tile.getTextureIndexActual() &&
-                                tileset[i][j - 1].getDirectionTile().equals(Direction.NOBORDER)) {
-                            if(tile.getTextureIndexActual() != 0)tileset[i][j] = new Tile(TileType.GRASS,Direction.TOP);
-                            else tileset[i][j] = new Tile(TileType.WATER, Direction.TOP);
+                        if (tileset[i][j - 1].getLayer() != tile.getLayer() &&
+                                tileset[i][j - 1].getBorderTypeTile().equals(BorderType.NOBORDER)) {
+                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.TOPBORDER);
+                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.TOPBORDER);
                         }
                     }
 
@@ -124,10 +131,10 @@ public class MapManager {
                     if (j < nbTilesHeight - 1) {
                         //System.out.println("voisin index: " + tileset[i][j + 1].getIndexTexture());
                         //System.out.println("currentIndex " + tile.getIndexTexture());
-                        if (tileset[i][j + 1].getTextureIndexActual() != tile.getTextureIndexActual() &&
-                                tileset[i][j + 1].getDirectionTile().equals(Direction.NOBORDER)) {
-                            if(tile.getTextureIndexActual() != 0)tileset[i][j] = new Tile(TileType.GRASS, Direction.BOTTOM);
-                            else tileset[i][j] = new Tile(TileType.WATER,Direction.BOTTOM);
+                        if (tileset[i][j + 1].getLayer() != tile.getLayer() &&
+                                tileset[i][j + 1].getBorderTypeTile().equals(BorderType.NOBORDER)) {
+                            if(tile.getLayer() != 0)tileset[i][j] = new Tile(TileType.GRASS, BorderType.BOTTOMBORDER);
+                            else tileset[i][j] = new Tile(TileType.WATER, BorderType.BOTTOMBORDER);
                         }
                     }
                 }

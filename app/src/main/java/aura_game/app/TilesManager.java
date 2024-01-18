@@ -1,7 +1,6 @@
 package aura_game.app;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import org.apache.commons.lang3.tuple.Pair;
 
 public class TilesManager {
     private SpriteSheetInfo tilesTexture;
@@ -20,17 +19,17 @@ public class TilesManager {
      */
     public void drawTile(SpriteBatch batch, Tile tile, int x, int y){
 
-        if(!tile.getDirectionTile().equals(Direction.NOBORDER)) {//Si c'est une bordure on affiche la tile dessous puis la bordure
-            batch.draw(tilesTexture.spriteSheetRegions()[0][tile.getTextureIndex(Direction.NOBORDER)], x, y);
-            batch.draw(tilesTexture.spriteSheetRegions()[1][tile.getTextureIndex(tile.getDirectionTile())], x, y);
+        if(!tile.getBorderTypeTile().equals(BorderType.NOBORDER)) {//Si c'est une bordure on affiche la tile dessous puis la bordure
+            batch.draw(tilesTexture.spriteSheetRegions()[0][tile.getTextureIndex(BorderType.NOBORDER)], x, y);
+            batch.draw(tilesTexture.spriteSheetRegions()[1][tile.getTextureIndex(tile.getBorderTypeTile())], x, y);
         }else{//Sinon on affiche la tile
             if(tile.getTextureIndexActual() != 0) {//TODO c'est un test !!!!!
-                if(tile.getTextureIndex(Direction.NOBORDER) == 1) {
+                if(tile.getTextureIndex(BorderType.NOBORDER) == 1) {
                     batch.draw(tilesTexture.spriteSheetRegions()[0][1], x, y);
                 }else {batch.draw(tilesTexture.spriteSheetRegions()[0][2], x, y);}
 
             }else{
-                batch.draw(tilesTexture.spriteSheetRegions()[0][tile.getTextureIndex(Direction.NOBORDER)], x, y);//DE LEAU
+                batch.draw(tilesTexture.spriteSheetRegions()[0][tile.getTextureIndex(BorderType.NOBORDER)], x, y);//DE LEAU
             }
         }
 

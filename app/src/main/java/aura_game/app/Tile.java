@@ -1,42 +1,40 @@
 package aura_game.app;
 
-import org.apache.commons.lang3.tuple.Pair;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class Tile {
 
-    private Map<Direction, Integer> tiles;  // Indices des textures pour chaque cas (bord ou non)
+    private Map<BorderType, Integer> tiles;  // Indices des textures pour chaque cas (bord ou non)
     //private Map<Biome, Integer> biomeTextures;
-    private Direction directionTile;
+    private BorderType borderType;
     private int layer;
 
-    public Tile(TileType tileType, Direction directionTile/*int layer*/) {
+    public Tile(TileType tileType, BorderType borderType/*int layer*/) {
         this.tiles = new HashMap<>();
         if(tileType.getTopBorderIndex() == 1){//TODO: c'est un TEST POUR AVOIR 2 HERBES
-            if(Math.random() < 0.5){    this.tiles.put(Direction.NOBORDER, 2);
-            }else{  this.tiles.put(Direction.NOBORDER, 1);}
+            if(Math.random() < 0.5){    this.tiles.put(BorderType.NOBORDER, 2);
+            }else{  this.tiles.put(BorderType.NOBORDER, 1);}
         }else {
-            this.tiles.put(Direction.NOBORDER, tileType.getTextureIndex());
+            this.tiles.put(BorderType.NOBORDER, tileType.getTextureIndex());
         }
-        this.tiles.put(Direction.TOP, tileType.getTopBorderIndex());
-        this.tiles.put(Direction.RIGHT, tileType.getRightBorderIndex());
-        this.tiles.put(Direction.LEFT, tileType.getLeftBorderIndex());
-        this.tiles.put(Direction.BOTTOM, tileType.getBottomBorderIndex());
-        this.directionTile = directionTile;
+        this.tiles.put(BorderType.TOPBORDER, tileType.getTopBorderIndex());
+        this.tiles.put(BorderType.RIGHTBORDER, tileType.getRightBorderIndex());
+        this.tiles.put(BorderType.LEFTBORDER, tileType.getLeftBorderIndex());
+        this.tiles.put(BorderType.BOTTOMBORDER, tileType.getBottomBorderIndex());
+        this.borderType = borderType;
         this.layer = tileType.getLayer();
     }
 
-    public int getTextureIndex(Direction direction) {
+    public int getTextureIndex(BorderType direction) {
         return tiles.getOrDefault(direction, -1);  // -1 si pas de bord dans cette direction
     }
 
     public int getTextureIndexActual(){
-        return getTextureIndex(directionTile);
+        return getTextureIndex(borderType);
     }
 
-    public void setTextureIndex(Direction direction, int textureIndex) {
+    public void setTextureIndex(BorderType direction, int textureIndex) {
         tiles.put(direction, textureIndex);
     }
 
@@ -48,12 +46,12 @@ public class Tile {
         this.layer = layer;
     }
 
-    public Direction getDirectionTile() {
-        return directionTile;
+    public BorderType getBorderTypeTile() {
+        return borderType;
     }
 
-    public void setDirectionTile(Direction direction) {
-        directionTile = direction;
+    public void setBorderTypeTile(BorderType border) {
+        borderType = border;
     }
 
 
