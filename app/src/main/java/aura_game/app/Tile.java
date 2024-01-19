@@ -11,7 +11,8 @@ public class Tile {
     private TileType tileType;
     private int layer;
 
-    public Tile(TileType tileType, BorderType borderType) {
+    /** Il est possible de mettre de l'herbe au layer 1 comme 2 comme... ainsi on demande lequel il veut*/
+    public Tile(TileType tileType, BorderType borderType, int layer) {
         this.tileType = tileType;
         this.tiles = new HashMap<>();
         if(tileType.getTopBorderIndex() == 1){//TODO: c'est un TEST POUR AVOIR 2 HERBES
@@ -25,7 +26,7 @@ public class Tile {
         this.tiles.put(BorderType.LEFTBORDER, tileType.getLeftBorderIndex());
         this.tiles.put(BorderType.BOTTOMBORDER, tileType.getBottomBorderIndex());
         this.borderType = borderType;
-        this.layer = tileType.getLayer();
+        this.layer = layer;
     }
 
     public int getTextureIndex(BorderType direction) {

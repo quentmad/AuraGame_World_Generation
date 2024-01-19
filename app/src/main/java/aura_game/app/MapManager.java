@@ -64,22 +64,24 @@ public class MapManager {
                 double y = (double) i / (double) nbTilesHeight;
                 //déterminent l'échelle du bruit dans chaque dimension
                 double n = relief * perlinNoise.noise(10 * x, 6 * y, z);//x et y permet d'allonger selon w ou h
-                //System.out.println("n is "+ n);
+                /*
                 if (n < 0.38) {
-                    tile = new Tile(TileType.WATER, BorderType.NOBORDER);
+                    tile = new Tile(TileType.WATER, BorderType.NOBORDER,0);
                 } else if (n >= 0.38 && n < 0.7) {
-                    tile = new Tile(TileType.GRASS, BorderType.NOBORDER);
+                    tile = new Tile(TileType.GRASS, BorderType.NOBORDER,1);
                 } else if (n >= 0.7 && n < 0.85) {
-                    tile = new Tile(TileType.MOUNTAIN1, BorderType.NOBORDER);
+                    tile = new Tile(TileType.GRASS, BorderType.NOBORDER,2);
                 } else if((n >= 0.85 && n < 0.95)){
-                    tile = new Tile(TileType.MOUNTAIN2, BorderType.NOBORDER);
+                    tile = new Tile(TileType.GRASS, BorderType.NOBORDER,3);
                 }else if((n >= 0.95 && n < 1.12)){
-                    tile = new Tile(TileType.MOUNTAIN3, BorderType.NOBORDER);
+                    tile = new Tile(TileType.GRASS, BorderType.NOBORDER,4);
                 }else{
-                    tile = new Tile(TileType.MOUNTAIN4, BorderType.NOBORDER);
+                    tile = new Tile(TileType.GRASS, BorderType.NOBORDER,5);
                 }
 
-                map[i][j] = tile;
+                */
+
+                map[i][j] = choosenBiome.getTileFor(n);
             }
         }
         addBorders(map);
@@ -122,7 +124,7 @@ public class MapManager {
                 tileset[nx][ny].getLayer() != currentTile.getLayer() &&
                 tileset[nx][ny].getBorderTypeTile().equals(BorderType.NOBORDER)) {//Ce n'est pas déjà un bord
 
-            tileset[ox][oy] = new Tile(currentTile.getTileType(), borderType);
+            tileset[ox][oy] = new Tile(currentTile.getTileType(), borderType, currentTile.getLayer());
         }
     }
 

@@ -18,19 +18,12 @@ public class TilesManager {
      * @param y La coordonnée y de la position où dessiner la tuile.
      */
     public void drawTile(SpriteBatch batch, Tile tile, int x, int y){
-
         if(!tile.getBorderTypeTile().equals(BorderType.NOBORDER)) {//Si c'est une bordure on affiche la tile dessous puis la bordure
             batch.draw(tilesTexture.spriteSheetRegions()[0][tile.getTextureIndex(BorderType.NOBORDER)], x, y);
             batch.draw(tilesTexture.spriteSheetRegions()[1][tile.getTextureIndex(tile.getBorderTypeTile())], x, y);
-        }else{//Sinon on affiche la tile
-            if(tile.getTextureIndexActual() != 0) {//TODO c'est un test !!!!!
-                if(tile.getTextureIndex(BorderType.NOBORDER) == 1) {
-                    batch.draw(tilesTexture.spriteSheetRegions()[0][1], x, y);
-                }else {batch.draw(tilesTexture.spriteSheetRegions()[0][2], x, y);}
 
-            }else{
-                batch.draw(tilesTexture.spriteSheetRegions()[0][tile.getTextureIndex(BorderType.NOBORDER)], x, y);//DE LEAU
-            }
+        }else{//Sinon on affiche la tile
+            batch.draw(tilesTexture.spriteSheetRegions()[0][tile.getTextureIndex(tile.getBorderTypeTile())], x, y);
         }
 
     }

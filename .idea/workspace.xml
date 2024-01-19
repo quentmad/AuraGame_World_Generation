@@ -8,20 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="change MapManager addBorder and enum Direction name to BorderType">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="Optimize addBorder">
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Direction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/resources/main/tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/resources/main/tilesTexture.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/resources/main/tilesTexture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/resources/main/tilesTextureDark.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/resources/main/tilesTextureDark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/resources/main/tilesborder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/compileTransaction/stash-dir/AuraGDX.class.uniqueId1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/out/map_v16h45.10.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v16h45.10.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/out/map_v16h45.27.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v16h45.27.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/out/map_v17h32.37.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v17h32.37.png" afterDir="false" />
@@ -40,18 +36,12 @@
       <change beforePath="$PROJECT_DIR$/app/out/map_v23h26.39.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v23h26.39.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/out/map_v23h27.44.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v23h27.44.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/out/map_v23h27.46.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v23h27.46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/tiles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/tilesTexture.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/tilesTexture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/tilesTextureDark.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/tilesTextureDark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/tilesborder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705582232980</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Optimize addBorder">
+      <option name="closed" value="true" />
+      <created>1705607274859</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705607274859</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -265,6 +263,7 @@
     <MESSAGE value="old" />
     <MESSAGE value="clean old things" />
     <MESSAGE value="change MapManager addBorder and enum Direction name to BorderType" />
-    <option name="LAST_COMMIT_MESSAGE" value="change MapManager addBorder and enum Direction name to BorderType" />
+    <MESSAGE value="Optimize addBorder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize addBorder" />
   </component>
 </project>

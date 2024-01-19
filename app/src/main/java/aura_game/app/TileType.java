@@ -2,12 +2,12 @@ package aura_game.app;
 
 public enum TileType {
 
-    WATER(0, 4,5,6,7, 0),
-    GRASS(1,0,1,2,3, 1),
-    MOUNTAIN1(3,0,1,2,3,2),
-    MOUNTAIN2(4,0,1,2,3,3),
-    MOUNTAIN3(5,0,1,2,3,4),
-    MOUNTAIN4(6,0,1,2,3,5);
+    WATER(0, 4,5,6,7),//0
+    GRASS(1,0,1,2,3),//1
+    MOUNTAIN1(3,0,1,2,3),//2
+    MOUNTAIN2(4,0,1,2,3),//3
+    MOUNTAIN3(5,0,1,2,3),//4
+    MOUNTAIN4(6,0,1,2,3);//5
 
 
     private final int textureIndex;
@@ -16,15 +16,15 @@ public enum TileType {
     private final int rightBorderIndex;
     private final int leftBorderIndex;
     private final int bottomBorderIndex;
-    private final int layer;
+    //private final int layer;
 
-    TileType(int textureIndex, int topBorderIndex, int rightBorderIndex, int leftBorderIndex, int bottomBorderIndex, int layer) {
+    TileType(int textureIndex, int topBorderIndex, int rightBorderIndex, int leftBorderIndex, int bottomBorderIndex/*, int layer*/) {
         this.textureIndex = textureIndex;
         this.topBorderIndex = topBorderIndex;
         this.rightBorderIndex = rightBorderIndex;
         this.leftBorderIndex = leftBorderIndex;
         this.bottomBorderIndex = bottomBorderIndex;
-        this.layer = layer;
+        //this.layer = layer;
     }
 
 
@@ -41,5 +41,5 @@ public enum TileType {
     public int getBottomBorderIndex() {
         return bottomBorderIndex;
     }
-    public int getLayer() {return layer;}
+
 }
