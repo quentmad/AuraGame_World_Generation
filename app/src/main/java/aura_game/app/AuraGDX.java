@@ -30,22 +30,23 @@ public class AuraGDX extends ApplicationAdapter {
 
     public Biome choseRandomBiome(){
         // Générer un nombre aléatoire entre 0 et 12 (inclus)
-        int randomNumber = (int) (Math.random() * 12);
+        int randomNumber = (int) (Math.random() * 13);
         // Afficher le nombre généré
-        System.out.println("Nombre aléatoire entre 0 et 12 : " + randomNumber);
+        System.out.println("Nombre aléatoire entre 0 et 13 : " + randomNumber);
         Biome choice = switch (randomNumber) {
             case 0 -> Biome.ISLAND;
             case 1 -> Biome.LAKES;
-            case 2 -> Biome.MOUNTAINS;
-            case 3 -> Biome.PLAINS;
-            case 4 -> Biome.DESERT;
-            case 5 -> Biome.FOREST;
-            case 6 -> Biome.SNOWY;
-            case 7 -> Biome.HIGHLANDS;
-            case 8 -> Biome.TAIGA;
-            case 9 -> Biome.TUNDRA;
-            case 10 -> Biome.JUNGLE;
-            case 11 -> Biome.BADLANDS;
+            case 2 -> Biome.SWAMP;
+            case 3 -> Biome.MOUNTAINS;
+            case 4 -> Biome.PLAINS;
+            case 5 -> Biome.DESERT;
+            case 6 -> Biome.FOREST;
+            case 7 -> Biome.SNOWY;
+            case 8 -> Biome.HIGHLANDS;
+            case 9 -> Biome.TAIGA;
+            case 10 -> Biome.TUNDRA;
+            case 11 -> Biome.JUNGLE;
+            case 12 -> Biome.BADLANDS;
             default -> Biome.PLAINS;
         };
         System.out.println(" ----- Biome : "+ choice.getName() + "----- \n \n");

@@ -98,18 +98,17 @@ public class MapManager {
             for (int j = 0; j < nbTilesHeight; ++j) {
                 Tile tile = tileset[i][j];
 
-                if (tile.getLayer() != 1) { // Si ce n'est pas de l'herbe
                     checkAndSetBorder(tileset, i - 1, j, i, j, tile, BorderType.LEFTBORDER);
                     checkAndSetBorder(tileset, i + 1, j, i, j, tile, BorderType.RIGHTBORDER);
-                    checkAndSetBorder(tileset, i, j - 1, i, j, tile, BorderType.TOPBORDER);
-                    checkAndSetBorder(tileset, i, j + 1, i, j, tile, BorderType.BOTTOMBORDER);
-                }
+                    checkAndSetBorder(tileset, i, j - 1, i, j, tile, BorderType.BOTTOMBORDER);
+                    checkAndSetBorder(tileset, i, j + 1, i, j, tile, BorderType.TOPBORDER);
             }
         }
     }
 
     /**
-     * Vérifie la tuile voisine à une position spécifiée et affecte une bordure à la tuile actuelle si nécessaire.
+     * Vérifie la tuile voisine à une position spécifiée et affecte une bordure à la tuile voisine (ainsi que la sous
+     * tuile de celle courante) si nécessaire.
      *
      * @param tileset    Le tableau 2D de tuiles représentant la carte.
      * @param nx         La position x de la tuile voisine.
@@ -120,11 +119,22 @@ public class MapManager {
      * @param borderType Le type de bordure à ajouter.
      */
     private void checkAndSetBorder(Tile[][] tileset, int nx, int ny, int ox, int oy,Tile currentTile, BorderType borderType) {
-        if(nx >= 0 && nx < nbTilesWidth && ny >= 0 && ny < nbTilesHeight &&
-                tileset[nx][ny].getLayer() != currentTile.getLayer() &&
-                tileset[nx][ny].getBorderTypeTile().equals(BorderType.NOBORDER)) {//Ce n'est pas déjà un bord
 
-            tileset[ox][oy] = new Tile(currentTile.getTileType(), borderType, currentTile.getLayer());
+        //Pas sur le bord de l'image et le voisin n'est pas déjà un bord
+        if(nx >= 0 && nx < nbTilesWidth && ny >= 0 && ny < nbTilesHeight && tileset[nx][ny].getCurrentTileBorder().equals(BorderType.NOBORDER)
+        && tileset[nx][ny].getLayer() > currentTile.getLayer() ) {//Layer du voisin supérieur
+
+            //Le current n'est pas de l'eau (le bord choisi est celui du voisin)
+            if(!currentTile.isWaterTile()) {
+                TileType borderTile = tileset[nx][ny].getTileType();
+                int borderLayer = tileset[nx][ny].getLayer();
+                tileset[nx][ny] = new Tile(borderTile, borderType, borderLayer, currentTile);
+
+            }else {//Le bord choisi est celui de l'eau
+                TileType borderTile = currentTile.getTileType();
+                int borderLayer = currentTile.getLayer();
+                tileset[ox][oy] = new Tile(borderTile, borderType, borderLayer, tileset[nx][ny] );
+            }
         }
     }
 

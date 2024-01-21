@@ -25,9 +25,10 @@ public class PerlinNoiseV2 {
      * Initialise la graine aléatoire et les paramètres de la génération du bruit.
      */
     public PerlinNoiseV2(Biome choosenBiome) {
-        seed = System.currentTimeMillis();
-        rand = new Random(seed);
-        z = rand.nextDouble();
+        //seed = System.currentTimeMillis();
+        //rand = new Random(seed);
+        //z = rand.nextDouble();
+        z = Math.random();
         //z = 0.7458753745545957;
         System.out.println("random :" + z);
 

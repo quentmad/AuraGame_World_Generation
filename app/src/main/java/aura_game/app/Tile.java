@@ -1,45 +1,61 @@
 package aura_game.app;
 
+import org.apache.commons.lang3.tuple.Pair;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Tile {
 
-    private Map<BorderType, Integer> tiles;  // Indices des textures pour chaque cas (bord ou non)
-    //private Map<Biome, Integer> biomeTextures;
-    private BorderType borderType;
+    // Indices des textures pour chaque type de bordures (bord ou non)
+    private Map<BorderType, Pair<Integer, Integer>> tiles;
+    private BorderType currentTileBorder;
     private TileType tileType;
+    /**Tuile en dessous la bordure, si c'est une bordure, sinon null*/
+    private Tile underTile;
     private int layer;
 
-    /** Il est possible de mettre de l'herbe au layer 1 comme 2 comme... ainsi on demande lequel il veut*/
-    public Tile(TileType tileType, BorderType borderType, int layer) {
+    /**Tile avec bordure, et tuile sous la tuile bordure */
+    public Tile(TileType tileType, BorderType currentTileBorder, int layer, Tile underTile) {
         this.tileType = tileType;
         this.tiles = new HashMap<>();
-        if(tileType.getTopBorderIndex() == 1){//TODO: c'est un TEST POUR AVOIR 2 HERBES
-            if(Math.random() < 0.5){    this.tiles.put(BorderType.NOBORDER, 2);
-            }else{  this.tiles.put(BorderType.NOBORDER, 1);}
-        }else {
-            this.tiles.put(BorderType.NOBORDER, tileType.getTextureIndex());
-        }
+        this.tiles.put(BorderType.NOBORDER, tileType.getTextureDefaultRandomIndex());
         this.tiles.put(BorderType.TOPBORDER, tileType.getTopBorderIndex());
         this.tiles.put(BorderType.RIGHTBORDER, tileType.getRightBorderIndex());
         this.tiles.put(BorderType.LEFTBORDER, tileType.getLeftBorderIndex());
         this.tiles.put(BorderType.BOTTOMBORDER, tileType.getBottomBorderIndex());
-        this.borderType = borderType;
+        this.currentTileBorder = currentTileBorder;
         this.layer = layer;
+        this.underTile = underTile;
     }
 
-    public int getTextureIndex(BorderType direction) {
-        return tiles.getOrDefault(direction, -1);  // -1 si pas de bord dans cette direction
+    /**Tile sans bordure */
+    public Tile(TileType tileType, int layer) {
+        this.tileType = tileType;
+        this.tiles = new HashMap<>();
+        this.tiles.put(BorderType.NOBORDER, tileType.getTextureDefaultRandomIndex());
+        this.tiles.put(BorderType.TOPBORDER, tileType.getTopBorderIndex());
+        this.tiles.put(BorderType.RIGHTBORDER, tileType.getRightBorderIndex());
+        this.tiles.put(BorderType.LEFTBORDER, tileType.getLeftBorderIndex());
+        this.tiles.put(BorderType.BOTTOMBORDER, tileType.getBottomBorderIndex());
+        this.currentTileBorder = BorderType.NOBORDER;
+        this.layer = layer;
+        this.underTile = null;
     }
 
-    public int getTextureIndexActual(){
-        return getTextureIndex(borderType);
+    private Pair<Integer, Integer> getTextureIndex(BorderType direction) {
+        return tiles.getOrDefault(direction, null);  // -1 si pas de bord dans cette direction
     }
 
-    public void setTextureIndex(BorderType direction, int textureIndex) {
+    public Pair<Integer, Integer> getTextureIndexActual(){
+        //return getTextureIndex(currentTileBorder);
+        return tiles.getOrDefault(currentTileBorder, null);  // -1 si pas de bord dans cette direction
+
+    }
+
+    /*public void setTextureIndex(BorderType direction, int textureIndex) {
         tiles.put(direction, textureIndex);
-    }
+    }*/
 
     public int getLayer() {
         return layer;
@@ -49,13 +65,22 @@ public class Tile {
         this.layer = layer;
     }
 
-    public BorderType getBorderTypeTile() {
-        return borderType;
+    public BorderType getCurrentTileBorder() {
+        return currentTileBorder;
     }
 
-    public void setBorderTypeTile(BorderType border) {
-        borderType = border;
-    }
+    /*public void setCurrentBorderTile(BorderType border) {
+        currentTileBorder = border;
+    }*/
 
     public TileType getTileType() { return tileType;}
+
+    public Tile getUnderTile() {
+        return underTile;
+    }
+
+    /**@return true si la tile est une tile d'eau (les bords etant ceux de l'eau et non de celui du layer au-dessus */
+    public boolean isWaterTile(){
+        return (tileType.equals(TileType.DARKWATER) || tileType.equals(TileType.WATER) ||tileType.equals(TileType.CLEARWATER));
+    }
 }
