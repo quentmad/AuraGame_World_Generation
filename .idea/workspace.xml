@@ -8,7 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="getTileFor dans biome">
+    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="change Tiles Texture and code to correspond">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Border.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -17,161 +18,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Biome.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Biome.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Entities/autruche.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Entities/cerf1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Entities/player.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Entities/testEntity1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Loots/apple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Loots/branch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Loots/leaf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Loots/rock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Loots/shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Loots/shadowMed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/Loots/stick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/ash_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/ash_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/ash_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/ash_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_1_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_1_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_1_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_1_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_2_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_2_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_2_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_2_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_ball_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_ball_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_ball_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/banyan_ball_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/boulder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/boulder_little.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/clear_trunk_little_tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/clear_trunk_tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_1_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_1_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_1_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_1_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_2_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_2_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_2_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_2_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/fir_dead_tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/japanese_maple_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/japanese_maple_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/japanese_maple_tree-orange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/japanese_maple_tree-orange_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/japanese_maple_tree-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/japanese_maple_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/japanese_maple_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/liana_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/liana_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/liana_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/oak_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/oak_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/oak_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/oak_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/spruce_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/spruce_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/spruce_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/items/spruce_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/layoutEntity/mapForest_layout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/resources/main/layoutItem/mapForest_layout.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v16h45.10.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v16h45.10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v16h45.27.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v16h45.27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v17h32.37.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v17h32.37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v17h32.41.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v17h32.41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v17h32.45.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v17h32.45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v18h40.54.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v18h40.54.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v18h46.27.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v18h46.27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v19h20.59.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v19h20.59.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v21h10.40.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v21h10.40.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v21h11.09.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v21h11.09.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v22h10.48 - MOUNTAINS.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v22h10.48 - MOUNTAINS.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v22h10.49 - ISLAND.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v22h10.49 - ISLAND.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v22h10.56 - LAKES.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v22h10.56 - LAKES.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v22h11.05 - DESERT.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v22h11.05 - DESERT.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v23h07.21.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v23h07.21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v23h26.39.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v23h26.39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v23h27.44.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v23h27.44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/map_v23h27.46.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/save/map_v23h27.46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/BorderType.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoise.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/SaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/SaveManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/SpriteSheetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/SpriteSheetInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Entities/autruche.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Entities/cerf1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Entities/player.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Entities/testEntity1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Loots/apple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Loots/branch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Loots/leaf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Loots/rock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Loots/shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Loots/shadowMed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/Loots/stick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/ash_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/ash_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/ash_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/ash_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_1_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_1_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_1_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_1_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_2_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_2_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_2_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_2_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_ball_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_ball_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_ball_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/banyan_ball_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/boulder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/boulder_little.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/clear_trunk_little_tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/clear_trunk_tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_1_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_1_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_1_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_1_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_2_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_2_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_2_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_2_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/fir_dead_tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/japanese_maple_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/japanese_maple_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/japanese_maple_tree-orange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/japanese_maple_tree-orange_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/japanese_maple_tree-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/japanese_maple_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/japanese_maple_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/liana_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/liana_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/liana_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/oak_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/oak_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/oak_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/oak_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/spruce_tree-dark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/spruce_tree-light_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/spruce_tree-verydark_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/items/spruce_tree-verylight_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/layoutEntity/mapForest_layout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/layoutItem/mapForest_layout.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" afterDir="false" />
@@ -380,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705655008088</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change Tiles Texture and code to correspond">
+      <option name="closed" value="true" />
+      <created>1705856101374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705856101376</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -406,6 +273,7 @@
     <MESSAGE value="change MapManager addBorder and enum Direction name to BorderType" />
     <MESSAGE value="Optimize addBorder" />
     <MESSAGE value="getTileFor dans biome" />
-    <option name="LAST_COMMIT_MESSAGE" value="getTileFor dans biome" />
+    <MESSAGE value="change Tiles Texture and code to correspond" />
+    <option name="LAST_COMMIT_MESSAGE" value="change Tiles Texture and code to correspond" />
   </component>
 </project>

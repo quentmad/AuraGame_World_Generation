@@ -81,18 +81,33 @@ public enum Biome {
         @Override
         public Tile getTileFor(double n) {
             if (n < 0.38) {
-                return new Tile(TileType.WATER, 0);
+                return new Tile(TileType.GRASS, 0);
             } else if (n >= 0.38 && n < 0.7) {
-                return new Tile(TileType.CLEARGRASS, 1) ;
+                return new Tile(TileType.GRASS, 1) ;
             } else if (n >= 0.7 && n < 0.85) {
-                return new Tile(TileType.CLEARGRASS, 2);
+                return new Tile(TileType.GRASS, 2);
             } else if (n >= 0.85 && n < 0.95) {
-                return new Tile(TileType.DARKGRASS, 3);
+                return new Tile(TileType.GRASS, 3);
             } else if (n >= 0.95 && n < 1.12) {
-                return new Tile(TileType.CLEARGRASS, 4);
+                return new Tile(TileType.GRASS, 4);
             } else {
-                return new Tile(TileType.SNOW, 5);
+                return new Tile(TileType.GRASS, 5);
             }
+            /**
+             *             if (n < 0.38) {
+             *                 return new Tile(TileType.WATER, 0);
+             *             } else if (n >= 0.38 && n < 0.7) {
+             *                 return new Tile(TileType.CLEARGRASS, 1) ;
+             *             } else if (n >= 0.7 && n < 0.85) {
+             *                 return new Tile(TileType.CLEARGRASS, 2);
+             *             } else if (n >= 0.85 && n < 0.95) {
+             *                 return new Tile(TileType.DARKGRASS, 3);
+             *             } else if (n >= 0.95 && n < 1.12) {
+             *                 return new Tile(TileType.CLEARGRASS, 4);
+             *             } else {
+             *                 return new Tile(TileType.SNOW, 5);
+             *             }
+             */
         }
     },
     DESERT("DESERT",4, 0.5, 2.0, 0.06, 1.3){

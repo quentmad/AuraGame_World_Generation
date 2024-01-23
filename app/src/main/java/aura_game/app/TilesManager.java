@@ -19,10 +19,9 @@ public class TilesManager {
      * @param y La coordonnée y de la position où dessiner la tuile.
      */
     public void drawTile(SpriteBatch batch, Tile tile, int x, int y){
-        if(!tile.getCurrentTileBorder().equals(BorderType.NOBORDER)) {//Si c'est une bordure on affiche la tile dessous puis la bordure
+        if(!tile.getCurrentTileBorder().equals(Border.NOBORDER)) {//Si c'est une bordure on affiche la tile dessous puis la bordure
             Pair<Integer,Integer> texture = tile.getUnderTile().getTextureIndexActual();//Texture de la tuile sous la bordure
             batch.draw(tilesTexture.spriteSheetRegions()[texture.getLeft()][texture.getRight()], x, y);
-            //batch.draw(tilesTexture.spriteSheetRegions()[tile.getTextureIndex(tile.getCurrentTileBorder()).getLeft()][tile.getTextureIndex(tile.getCurrentTileBorder()).getRight()], x, y);
             batch.draw(tilesTexture.spriteSheetRegions()[tile.getTextureIndexActual().getLeft()][tile.getTextureIndexActual().getRight()], x, y);
 
         }else{//Sinon on affiche la tile

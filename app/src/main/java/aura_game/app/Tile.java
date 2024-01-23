@@ -8,22 +8,28 @@ import java.util.Map;
 public class Tile {
 
     // Indices des textures pour chaque type de bordures (bord ou non)
-    private Map<BorderType, Pair<Integer, Integer>> tiles;
-    private BorderType currentTileBorder;
+    private Map<Border, Pair<Integer, Integer>> tiles;
+    private Border currentTileBorder;
     private TileType tileType;
     /**Tuile en dessous la bordure, si c'est une bordure, sinon null*/
     private Tile underTile;
     private int layer;
 
     /**Tile avec bordure, et tuile sous la tuile bordure */
-    public Tile(TileType tileType, BorderType currentTileBorder, int layer, Tile underTile) {
+    public Tile(TileType tileType, Border currentTileBorder, int layer, Tile underTile) {
         this.tileType = tileType;
         this.tiles = new HashMap<>();
-        this.tiles.put(BorderType.NOBORDER, tileType.getTextureDefaultRandomIndex());
-        this.tiles.put(BorderType.TOPBORDER, tileType.getTopBorderIndex());
-        this.tiles.put(BorderType.RIGHTBORDER, tileType.getRightBorderIndex());
-        this.tiles.put(BorderType.LEFTBORDER, tileType.getLeftBorderIndex());
-        this.tiles.put(BorderType.BOTTOMBORDER, tileType.getBottomBorderIndex());
+        this.tiles.put(Border.NOBORDER, tileType.getTextureDefaultRandomIndex());
+        this.tiles.put(Border.TOP, tileType.getTopBorderIndex());
+        this.tiles.put(Border.RIGHT, tileType.getRightBorderIndex());
+        this.tiles.put(Border.LEFT, tileType.getLeftBorderIndex());
+        this.tiles.put(Border.BOTTOM, tileType.getBottomBorderIndex());
+        //Coins
+        this.tiles.put(Border.RIGHT_BOTTOM, tileType.getRightBottomIndex());
+        this.tiles.put(Border.BOTTOM_LEFT, tileType.getBottomLeftIndex());
+        this.tiles.put(Border.RIGHT_TOP, tileType.getRightTopIndex());
+        this.tiles.put(Border.TOP_LEFT, tileType.getTopLeftIndex());
+
         this.currentTileBorder = currentTileBorder;
         this.layer = layer;
         this.underTile = underTile;
@@ -33,17 +39,23 @@ public class Tile {
     public Tile(TileType tileType, int layer) {
         this.tileType = tileType;
         this.tiles = new HashMap<>();
-        this.tiles.put(BorderType.NOBORDER, tileType.getTextureDefaultRandomIndex());
-        this.tiles.put(BorderType.TOPBORDER, tileType.getTopBorderIndex());
-        this.tiles.put(BorderType.RIGHTBORDER, tileType.getRightBorderIndex());
-        this.tiles.put(BorderType.LEFTBORDER, tileType.getLeftBorderIndex());
-        this.tiles.put(BorderType.BOTTOMBORDER, tileType.getBottomBorderIndex());
-        this.currentTileBorder = BorderType.NOBORDER;
+        this.tiles.put(Border.NOBORDER, tileType.getTextureDefaultRandomIndex());
+        this.tiles.put(Border.TOP, tileType.getTopBorderIndex());
+        this.tiles.put(Border.RIGHT, tileType.getRightBorderIndex());
+        this.tiles.put(Border.LEFT, tileType.getLeftBorderIndex());
+        this.tiles.put(Border.BOTTOM, tileType.getBottomBorderIndex());
+        //Coins
+        this.tiles.put(Border.RIGHT_BOTTOM, tileType.getRightBottomIndex());
+        this.tiles.put(Border.BOTTOM_LEFT, tileType.getBottomLeftIndex());
+        this.tiles.put(Border.RIGHT_TOP, tileType.getRightTopIndex());
+        this.tiles.put(Border.TOP_LEFT, tileType.getTopLeftIndex());
+
+        this.currentTileBorder = Border.NOBORDER;
         this.layer = layer;
         this.underTile = null;
     }
 
-    private Pair<Integer, Integer> getTextureIndex(BorderType direction) {
+    private Pair<Integer, Integer> getTextureIndex(Border direction) {
         return tiles.getOrDefault(direction, null);  // -1 si pas de bord dans cette direction
     }
 
@@ -53,19 +65,15 @@ public class Tile {
 
     }
 
-    /*public void setTextureIndex(BorderType direction, int textureIndex) {
-        tiles.put(direction, textureIndex);
-    }*/
-
     public int getLayer() {
         return layer;
     }
 
-    public void setLayer(int layer) {
+    /*public void setLayer(int layer) {
         this.layer = layer;
-    }
+    }*/
 
-    public BorderType getCurrentTileBorder() {
+    public Border getCurrentTileBorder() {
         return currentTileBorder;
     }
 
