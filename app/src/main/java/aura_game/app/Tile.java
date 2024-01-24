@@ -24,11 +24,18 @@ public class Tile {
         this.tiles.put(Border.RIGHT, tileType.getRightBorderIndex());
         this.tiles.put(Border.LEFT, tileType.getLeftBorderIndex());
         this.tiles.put(Border.BOTTOM, tileType.getBottomBorderIndex());
-        //Coins
-        this.tiles.put(Border.RIGHT_BOTTOM, tileType.getRightBottomIndex());
-        this.tiles.put(Border.BOTTOM_LEFT, tileType.getBottomLeftIndex());
-        this.tiles.put(Border.RIGHT_TOP, tileType.getRightTopIndex());
-        this.tiles.put(Border.TOP_LEFT, tileType.getTopLeftIndex());
+        //Coins out
+        this.tiles.put(Border.ORIGHT_BOTTOM, tileType.getORightBottomIndex());
+        this.tiles.put(Border.OBOTTOM_LEFT, tileType.getOBottomLeftIndex());
+        this.tiles.put(Border.ORIGHT_TOP, tileType.getORightTopIndex());
+        this.tiles.put(Border.OTOP_LEFT, tileType.getOTopLeftIndex());
+
+        //Coins out
+        this.tiles.put(Border.ILEFT_TOP, tileType.getiLeftTopIndex());
+        this.tiles.put(Border.ITOP_RIGHT, tileType.getiTopRightIndex());
+        this.tiles.put(Border.ILEFT_BOTTOM, tileType.getiLeftBottomIndex());
+        this.tiles.put(Border.IBOTTOM_RIGHT, tileType.getiBottomRightIndex());
+
 
         this.currentTileBorder = currentTileBorder;
         this.layer = layer;
@@ -45,22 +52,28 @@ public class Tile {
         this.tiles.put(Border.LEFT, tileType.getLeftBorderIndex());
         this.tiles.put(Border.BOTTOM, tileType.getBottomBorderIndex());
         //Coins
-        this.tiles.put(Border.RIGHT_BOTTOM, tileType.getRightBottomIndex());
-        this.tiles.put(Border.BOTTOM_LEFT, tileType.getBottomLeftIndex());
-        this.tiles.put(Border.RIGHT_TOP, tileType.getRightTopIndex());
-        this.tiles.put(Border.TOP_LEFT, tileType.getTopLeftIndex());
+        this.tiles.put(Border.ORIGHT_BOTTOM, tileType.getORightBottomIndex());
+        this.tiles.put(Border.OBOTTOM_LEFT, tileType.getOBottomLeftIndex());
+        this.tiles.put(Border.ORIGHT_TOP, tileType.getORightTopIndex());
+        this.tiles.put(Border.OTOP_LEFT, tileType.getOTopLeftIndex());
+
+        //Coins out
+        this.tiles.put(Border.ILEFT_TOP, tileType.getiLeftTopIndex());
+        this.tiles.put(Border.ITOP_RIGHT, tileType.getiTopRightIndex());
+        this.tiles.put(Border.ILEFT_BOTTOM, tileType.getiLeftBottomIndex());
+        this.tiles.put(Border.IBOTTOM_RIGHT, tileType.getiBottomRightIndex());
+
 
         this.currentTileBorder = Border.NOBORDER;
         this.layer = layer;
         this.underTile = null;
     }
 
-    private Pair<Integer, Integer> getTextureIndex(Border direction) {
+    public Pair<Integer, Integer> getTextureIndex(Border direction) {
         return tiles.getOrDefault(direction, null);  // -1 si pas de bord dans cette direction
     }
 
     public Pair<Integer, Integer> getTextureIndexActual(){
-        //return getTextureIndex(currentTileBorder);
         return tiles.getOrDefault(currentTileBorder, null);  // -1 si pas de bord dans cette direction
 
     }

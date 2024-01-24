@@ -4,9 +4,14 @@ package aura_game.app;
  * La direction fait référence à la direction vers laquelle se trouve l'herbe... de la texture
  */
 public enum Border {
-    RIGHT_BOTTOM, BOTTOM, BOTTOM_LEFT,
+    //O: coins out (vers l'extérieur)
+    //I: coins in (vers l'intérieur)
+    ORIGHT_BOTTOM, BOTTOM, OBOTTOM_LEFT,
     RIGHT, NOBORDER, LEFT,
-    RIGHT_TOP, TOP, TOP_LEFT;
+    ORIGHT_TOP, TOP, OTOP_LEFT,
+
+    ILEFT_TOP, ITOP_RIGHT,
+    ILEFT_BOTTOM, IBOTTOM_RIGHT;
 
     /**@return true si c'est un bord simple (top, right, left, bottom)*/
     public boolean isSimpleBorder(){

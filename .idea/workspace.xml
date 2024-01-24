@@ -8,8 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="change Tiles Texture and code to correspond">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Border.java" afterDir="false" />
+    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="23 01">
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -20,17 +19,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Biome.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Biome.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/BorderType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Border.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Border.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" afterDir="false" />
@@ -247,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705856101376</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="23 01">
+      <option name="closed" value="true" />
+      <created>1706042503198</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706042503198</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -274,6 +279,7 @@
     <MESSAGE value="Optimize addBorder" />
     <MESSAGE value="getTileFor dans biome" />
     <MESSAGE value="change Tiles Texture and code to correspond" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Tiles Texture and code to correspond" />
+    <MESSAGE value="23 01" />
+    <option name="LAST_COMMIT_MESSAGE" value="23 01" />
   </component>
 </project>

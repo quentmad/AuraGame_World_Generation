@@ -218,16 +218,16 @@ public enum Biome {
             }
         }
     },
-    JUNGLE("JUNGLE",5, 0.6, 2.1, 0.1, 1.3){
+    JUNGLE("JUNGLE",4, 0.6, 2.0, 0.1, 1.3){
         @Override
         public Tile getTileFor(double n) {
             if (n < 0.38) {
                 return new Tile(TileType.WATER, 0);
             } else if (n >= 0.38 && n < 0.7) {
                 return new Tile(TileType.DARKSAND, 1) ;
-            } else if (n >= 0.7 && n < 0.78) {
+            } else if (n >= 0.7 && n < 0.85) {
                 return new Tile(TileType.DARKGRASS, 2);
-            } else if (n >= 0.78 && n < 0.95) {
+            } else if (n >= 0.85 && n < 0.95) {
                 return new Tile(TileType.DARKGRASS, 3);
             } else if (n >= 0.95 && n < 1.12) {
                 return new Tile(TileType.DARKGRASS, 4);
