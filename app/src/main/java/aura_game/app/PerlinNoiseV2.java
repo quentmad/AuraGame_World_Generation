@@ -28,8 +28,8 @@ public class PerlinNoiseV2 {
         //seed = System.currentTimeMillis();
         //rand = new Random(seed);
         //z = rand.nextDouble();
-        z = Math.random();
-        //z = 0.7476605404749838;
+        //z = Math.random();
+        //z = 0.7602631475237638;
         System.out.println("random :" + z);
 
         octaves = choosenBiome.getOctaves();

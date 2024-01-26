@@ -36,19 +36,19 @@ public enum TileType {
             Pair.of(0,21), Pair.of(0,23),Pair.of(2,21), Pair.of(2,23 ),//COINS Out
             Pair.of(3,21), Pair.of(3,22),Pair.of(4,21), Pair.of(4,22)),//COINS In
 
-    WATER(new Pair[]{Pair.of(1,25),Pair.of(1,26), Pair.of(2,25),Pair.of(2,26) },    Pair.of(0,26),Pair.of(1,27),Pair.of(1,24),Pair.of(3,25),
-            Pair.of(0,27), Pair.of(0,24),Pair.of(3,27), Pair.of(3,24 ),//COINS Out
-            Pair.of(4,24), Pair.of(5,25),Pair.of(4,24), Pair.of(5,25)),//COINS In
+    WATER(new Pair[]{Pair.of(1,25),Pair.of(1,26)/*, Pair.of(2,25),Pair.of(2,26)*/ },    Pair.of(0,26),Pair.of(1,27),Pair.of(1,24),Pair.of(3,25),
+            Pair.of(4,24), Pair.of(4,25),Pair.of(5,24), Pair.of(5,25),//COINS In
+            Pair.of(0,24), Pair.of(0,27),Pair.of(3,24), Pair.of(3,27 )),//COINS Out
 
 
-    CLEARWATER(new Pair[]{Pair.of(3,30),Pair.of(4,30)},    Pair.of(3,29),Pair.of(1,28),Pair.of(1,30),Pair.of(0,29),
-            Pair.of(0,30), Pair.of(0,28),Pair.of(2,30), Pair.of(2,28 ),//COINS Out
-            Pair.of(3,28), Pair.of(4,29),Pair.of(3,28), Pair.of(4,29)),//COINS In
+    CLEARWATER(new Pair[]{Pair.of(3,30),Pair.of(4,30)},Pair.of(2,29),Pair.of(1,28),Pair.of(1,30),Pair.of(0,29),
+            Pair.of(3,28), Pair.of(4,29),Pair.of(3,28), Pair.of(4,29),//COINS In
+            Pair.of(0,28), Pair.of(0,30),Pair.of(2,28), Pair.of(2,30 )),//COINS Out
 
 
     DARKWATER(new Pair[]{Pair.of(1,35),Pair.of(3,36) },     Pair.of(0,35),Pair.of(1,36),Pair.of(1,34),Pair.of(3,35),
-            Pair.of(0,34), Pair.of(0,36),Pair.of(2,34), Pair.of(2,36 ),//COINS Out
-            Pair.of(3,34), Pair.of(4,35),Pair.of(3,34), Pair.of(4,35)),//COINS In
+            Pair.of(3,34), Pair.of(4,35),Pair.of(3,34), Pair.of(4,35),//COINS In
+            Pair.of(0,34), Pair.of(0,36),Pair.of(2,34), Pair.of(2,36 )),//COINS Out
 
     ;
 
