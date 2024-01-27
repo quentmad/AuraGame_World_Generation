@@ -18,40 +18,38 @@ public class Tile {
     /**Tile avec bordure, et tuile sous la tuile bordure */
     public Tile(TileType tileType, Border currentTileBorder, int layer, Tile underTile) {
         this.tileType = tileType;
-        this.tiles = new HashMap<>();
-        this.tiles.put(Border.NOBORDER, tileType.getTextureDefaultRandomIndex());
-        this.tiles.put(Border.TOP, tileType.getTopBorderIndex());
-        this.tiles.put(Border.RIGHT, tileType.getRightBorderIndex());
-        this.tiles.put(Border.LEFT, tileType.getLeftBorderIndex());
-        this.tiles.put(Border.BOTTOM, tileType.getBottomBorderIndex());
-        //Coins out
-        this.tiles.put(Border.ORIGHT_BOTTOM, tileType.getORightBottomIndex());
-        this.tiles.put(Border.OBOTTOM_LEFT, tileType.getOBottomLeftIndex());
-        this.tiles.put(Border.ORIGHT_TOP, tileType.getORightTopIndex());
-        this.tiles.put(Border.OTOP_LEFT, tileType.getOTopLeftIndex());
-
-        //Coins out
-        this.tiles.put(Border.ILEFT_TOP, tileType.getiLeftTopIndex());
-        this.tiles.put(Border.ITOP_RIGHT, tileType.getiTopRightIndex());
-        this.tiles.put(Border.ILEFT_BOTTOM, tileType.getiLeftBottomIndex());
-        this.tiles.put(Border.IBOTTOM_RIGHT, tileType.getiBottomRightIndex());
-
-
+        initializeHashmap();
         this.currentTileBorder = currentTileBorder;
         this.layer = layer;
         this.underTile = underTile;
     }
 
-    /**Tile sans bordure */
+    /**Tile sans UnderTile*/
+    public Tile(TileType tileType, Border currentTileBorder, int layer) {
+        this.tileType = tileType;
+        initializeHashmap();
+        this.currentTileBorder = currentTileBorder;
+        this.layer = layer;
+        this.underTile = null;
+    }
+
+    /**Tile sans UnderTile et avec NoBorder*/
     public Tile(TileType tileType, int layer) {
         this.tileType = tileType;
+        initializeHashmap();
+        this.currentTileBorder = Border.NOBORDER;
+        this.layer = layer;
+        this.underTile = null;
+    }
+
+    private void initializeHashmap(){
         this.tiles = new HashMap<>();
         this.tiles.put(Border.NOBORDER, tileType.getTextureDefaultRandomIndex());
         this.tiles.put(Border.TOP, tileType.getTopBorderIndex());
         this.tiles.put(Border.RIGHT, tileType.getRightBorderIndex());
         this.tiles.put(Border.LEFT, tileType.getLeftBorderIndex());
         this.tiles.put(Border.BOTTOM, tileType.getBottomBorderIndex());
-        //Coins
+        //Coins out
         this.tiles.put(Border.ORIGHT_BOTTOM, tileType.getORightBottomIndex());
         this.tiles.put(Border.OBOTTOM_LEFT, tileType.getOBottomLeftIndex());
         this.tiles.put(Border.ORIGHT_TOP, tileType.getORightTopIndex());
@@ -63,12 +61,7 @@ public class Tile {
         this.tiles.put(Border.ILEFT_BOTTOM, tileType.getiLeftBottomIndex());
         this.tiles.put(Border.IBOTTOM_RIGHT, tileType.getiBottomRightIndex());
 
-
-        this.currentTileBorder = Border.NOBORDER;
-        this.layer = layer;
-        this.underTile = null;
     }
-
     public Pair<Integer, Integer> getTextureIndex(Border direction) {
         return tiles.getOrDefault(direction, null);  // -1 si pas de bord dans cette direction
     }

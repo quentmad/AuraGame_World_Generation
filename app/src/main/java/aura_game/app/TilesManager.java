@@ -10,6 +10,10 @@ public class TilesManager {
         this.tilesTexture = new SpriteSheetInfo(TILE_SIZE, "OFFICIAL_TILESET_test1-32_32_Lis");
     }
 
+    public SpriteSheetInfo getTilesTexture() {
+        return tilesTexture;
+    }
+
     /**
      * Dessine une tuile à l'écran.
      *
@@ -27,6 +31,9 @@ public class TilesManager {
         }else{//Sinon on affiche la tile
             batch.draw(tilesTexture.spriteSheetRegions()[tile.getTextureIndexActual().getLeft()][tile.getTextureIndexActual().getRight()], x, y);
         }
+
+
+
 
     }
 

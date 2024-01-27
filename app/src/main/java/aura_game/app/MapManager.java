@@ -17,6 +17,8 @@ public class MapManager {
     private final int tileSize;
     private final double relief;
 
+    private MapSaver mapSaver;
+
     private Tile[][] map;
 
     private int count = 0;
@@ -26,11 +28,12 @@ public class MapManager {
         this.batch = new SpriteBatch();
         this.tilesManager = new TilesManager(TILE_SIZE);
         this.perlinNoise = new PerlinNoiseV2(choosenBiome);
-        this.saveManager = new SaveManager();
+        this.saveManager = new SaveManager(tilesManager);
         this.map = new Tile[DEFAULT_NB_TILES_WIDTH][DEFAULT_NB_TILES_HEIGHT];
         this.nbTilesWidth = DEFAULT_NB_TILES_WIDTH;
         this.nbTilesHeight = DEFAULT_NB_TILES_HEIGHT;
         this.tileSize = TILE_SIZE;
+        this.mapSaver  = new MapSaver(tilesManager,nbTilesWidth,nbTilesHeight,tileSize );
         this.relief = choosenBiome.getRelief() ;
         coinsManager = new CoinsManager(nbTilesWidth, nbTilesHeight);
 
@@ -44,7 +47,8 @@ public class MapManager {
         batch.begin();
         drawMap();
         if(count == 2) {
-            //saveManager.saveImage(choosenBiome);
+            saveManager.saveImage(choosenBiome, nbTilesWidth * tileSize, nbTilesHeight * tileSize, map, tileSize);
+            //mapSaver.saveMapAsPNG(map, "out/testpixmap.png");
         }
         batch.end();
     }

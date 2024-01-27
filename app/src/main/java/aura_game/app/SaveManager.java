@@ -4,26 +4,60 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.PixmapIO;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.glutils.FrameBuffer;
+import com.badlogic.gdx.utils.ScreenUtils;
 
 import java.time.LocalTime;
 
 public class SaveManager {
 
+    TilesManager tilesManager;
+    private FrameBuffer frameBuffer;
 
+    public SaveManager(TilesManager tm) {
+        this.tilesManager = tm;
+        // Créez un FrameBuffer avec la taille de la fenêtre d'affichage (à utiliser lors de la capture de l'écran)
+        frameBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false);
+    }
 
+    public void saveImage(Biome biome, int width, int height, Tile[][] tileset, int tileSize) {
+        // Capturer l'écran dans un Pixmap à partir du FrameBuffer
+        //Pixmap pixmap = captureScreen(width, height);
+        Pixmap pixmap = new Pixmap(width, height, Pixmap.Format.RGBA8888);
 
-    public void saveImage(Biome biome) {
-        // Capturer l'écran dans un Pixmap
-        Pixmap pixmap = captureScreen(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        // Parcourez le tableau de tuiles et dessinez chaque tuile sur le Pixmap
+        for (int x = 0; x < tileset.length; x++) {
+            for (int y = 0; y < tileset[0].length; y++) {
+                Tile currentTile = tileset[x][y];
+                // Dessinez la tuile sur le Pixmap en fonction de sa position dans la map
+                drawTileOnPixmap(currentTile, pixmap, x * tileSize, y * tileSize);
+            }
+        }
 
         // Enregistrer le Pixmap en tant qu'image PNG
-        PixmapIO.writePNG(Gdx.files.local("out/map_v"+getCurrentTime()+" - "+biome.getName()+".png"), pixmap);
+        PixmapIO.writePNG(Gdx.files.local("out/map_v" + getCurrentTime() + " - " + biome.getName() + ".png"), pixmap);
 
         // Libérer la mémoire du Pixmap
         pixmap.dispose();
     }
 
-    private String getCurrentTime(){
+    private void drawTileOnPixmap(Tile tile, Pixmap targetPixmap, int targetX, int targetY) {
+        // Récupérer la texture de la tuile à partir du gestionnaire de tuiles
+        Texture textureCurrentTile = tilesManager.getTilesTexture().spriteSheetRegions()[tile.getTextureIndexActual().getLeft()][tile.getTextureIndexActual().getRight()].getTexture();
+
+        // Récupérer le Pixmap de la texture de la tuile
+        Pixmap pixmapTile = ScreenUtils.getFrameBufferPixmap(0, 0, textureCurrentTile.getWidth(), textureCurrentTile.getHeight());
+
+        // Dessiner le Pixmap de la tuile sur le Pixmap cible à la position spécifiée
+        targetPixmap.drawPixmap(pixmapTile, targetX, targetY);
+
+        // Libérer la mémoire du Pixmap de la tuile
+        pixmapTile.dispose();
+    }
+
+    private String getCurrentTime() {
         // Obtenir l'heure actuelle
         LocalTime now = LocalTime.now();
 
@@ -37,21 +71,25 @@ public class SaveManager {
     }
 
     private Pixmap captureScreen(int exportWidth, int exportHeight) {
-        // Créer un Pixmap de la taille de l'écran
-        Pixmap pixmap = new Pixmap(exportWidth, exportHeight, Pixmap.Format.RGBA8888);
-
-        // Capturer l'écran et copier les pixels dans le Pixmap
-        Gdx.gl.glReadPixels(0, 0, exportWidth, exportHeight, GL20.GL_RGBA, GL20.GL_UNSIGNED_BYTE, pixmap.getPixels());
-
-        // Inverser l'image verticalement, car les coordonnées de la fenêtre LibGDX sont inversées par rapport aux coordonnées de la pixmap
-        Pixmap flippedPixmap = new Pixmap(exportWidth, exportHeight, Pixmap.Format.RGBA8888);
-        for (int y = 0; y < exportHeight; y++) {
-            flippedPixmap.drawPixmap(pixmap, 0, y, 0, exportHeight - y - 1, exportWidth, 1);
+        // Redimensionner le FrameBuffer si nécessaire
+        if (frameBuffer.getWidth() != exportWidth || frameBuffer.getHeight() != exportHeight) {
+            frameBuffer.dispose();
+            frameBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, exportWidth, exportHeight, false);
         }
 
-        // Disposez du Pixmap original
-        pixmap.dispose();
+        // Activer le FrameBuffer pour le rendu
+        frameBuffer.begin();
 
-        return flippedPixmap;
+        // Effacer le FrameBuffer
+        Gdx.gl.glClearColor(0f, 0f, 0f, 0f);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        // Capturez le rendu ici en fonction de votre implémentation
+
+        // Désactiver le FrameBuffer
+        frameBuffer.end();
+
+        // Obtenez le Pixmap du FrameBuffer
+        return ScreenUtils.getFrameBufferPixmap(0, 0, exportWidth, exportHeight);
     }
 }

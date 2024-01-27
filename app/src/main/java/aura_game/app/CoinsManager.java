@@ -24,10 +24,10 @@ public class CoinsManager {
                 Tile under = null;
 
                 if((currentTile.getCurrentTileBorder().equals(Border.NOBORDER))){//Si la tuile testé était une no bordure alors la futur underTile sera la current
-                    under = new Tile(currentTile.getTileType(),currentTile.getLayer()-1);
+                    under = new Tile(currentTile.getTileType(),currentTile.getLayer());
 
                 }else {//if(currentTile.getCurrentTileBorder().isSimpleBorder()){   //TODO: pb de sous tile par moment
-                    under = new Tile(currentTile.getUnderTile().getTileType(), currentTile.getLayer()-1);//Si la tuile était une bordure simple alors la futur underTile sera la underTile de current
+                    under = new Tile(currentTile.getUnderTile().getTileType(), currentTile.getLayer());//Si la tuile était une bordure simple alors la futur underTile sera la underTile de current
                 }
                 if(under != null) {
                     checkNeighborsAndSetCoins(tileset, i, j, currentTile, under);
@@ -205,16 +205,15 @@ public class CoinsManager {
                 Tile under = null;
 
                 if((currentTile.getCurrentTileBorder().equals(Border.NOBORDER))){//Si la tuile testé était une no bordure alors la futur underTile sera la current
-                    under = new Tile(currentTile.getTileType(),currentTile.getLayer()-1);
+                    under = new Tile(currentTile.getTileType(),currentTile.getLayer());
 
                 }else {//if(currentTile.getCurrentTileBorder().isSimpleBorder()){
-                    under = new Tile(currentTile.getUnderTile().getTileType(),currentTile.getLayer()-1/*-1?*/);//Si la tuile était une bordure simple alors la futur underTile sera la underTile de current
+                    under = new Tile(currentTile.getUnderTile().getTileType(),currentTile.getLayer()/*-1?*/);//Si la tuile était une bordure simple alors la futur underTile sera la underTile de current
                 }
 
                 if(under != null) {
                     checkNeighborsAndSetCoinsModify(tileset, i, j, currentTile, under);
                 }
-
 
             }
         }
@@ -239,7 +238,7 @@ public class CoinsManager {
 
             if(!tileset[xxx][yyy].getCurrentTileBorder().equals(borders.get(i).getLeft())){//Si la bordure qu'on veut mettre est pas déjà l'actuelle
                     //System.out.println("print tilep2");
-                    TileType neighborTileType = tileset[borders.get(i).getRight().getX()][borders.get(i).getRight().getY()].getTileType();//TEST
+                    TileType neighborTileType = tileset[borders.get(1).getRight().getX()][borders.get(1).getRight().getY()].getTileType();//on prend le 1 (1er avec la texture cible) car le 0 correspond a l'actuel donc a la case vide soit la texture différente
                     tileset[xxx][yyy] = new Tile(neighborTileType , borders.get(i).getLeft(), currentTile.getLayer(), underTile);
 
                 }//else{System.out.println("same" + tileset[xxx][yyy].getCurrentTileBorder() + " \n \n");}
