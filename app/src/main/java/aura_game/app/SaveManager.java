@@ -37,7 +37,7 @@ public class SaveManager {
         }
 
         // Enregistrer le Pixmap en tant qu'image PNG
-        PixmapIO.writePNG(Gdx.files.local("out/map_v" + getCurrentTime() + " - " + biome.getName() + ".png"), pixmap);
+        PixmapIO.writePNG(Gdx.files.local("out/map_v" + getCurrentTime() + " - " + biome.getName() + "-testCorrectionBorder.png"), pixmap);
 
         // Libérer la mémoire du Pixmap
         pixmap.dispose();

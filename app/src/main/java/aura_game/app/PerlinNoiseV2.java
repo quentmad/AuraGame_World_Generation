@@ -28,9 +28,9 @@ public class PerlinNoiseV2 {
         //seed = System.currentTimeMillis();
         //rand = new Random(seed);
         //z = rand.nextDouble();
-        //z = Math.random();
-        //z = 0.7602631475237638;
-        System.out.println("random :" + z);
+        z = Math.random();
+        //z = 0.8567405917242321;//0.49404996834057824;
+        //System.out.println("random :" + z);
 
         octaves = choosenBiome.getOctaves();
         persistence = choosenBiome.getPersistence();

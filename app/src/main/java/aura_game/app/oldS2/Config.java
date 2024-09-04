@@ -1,4 +1,4 @@
-package aura_game.app.S2;
+package aura_game.app.oldS2;
 
 public class Config {
     public static final String TILESHEET_PATH = "PunyWorld/punyworld-overworld-tileset-perlin.png";

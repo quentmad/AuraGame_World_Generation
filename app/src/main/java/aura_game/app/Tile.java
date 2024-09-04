@@ -14,7 +14,6 @@ public class Tile {
     /**Tuile en dessous la bordure, si c'est une bordure, sinon null*/
     private Tile underTile;
     private int layer;
-
     /**Tile avec bordure, et tuile sous la tuile bordure */
     public Tile(TileType tileType, Border currentTileBorder, int layer, Tile underTile) {
         this.tileType = tileType;
@@ -68,24 +67,15 @@ public class Tile {
 
     public Pair<Integer, Integer> getTextureIndexActual(){
         return tiles.getOrDefault(currentTileBorder, null);  // -1 si pas de bord dans cette direction
-
     }
 
     public int getLayer() {
         return layer;
     }
 
-    /*public void setLayer(int layer) {
-        this.layer = layer;
-    }*/
-
     public Border getCurrentTileBorder() {
         return currentTileBorder;
     }
-
-    /*public void setCurrentBorderTile(BorderType border) {
-        currentTileBorder = border;
-    }*/
 
     public TileType getTileType() { return tileType;}
 
@@ -97,4 +87,30 @@ public class Tile {
     public boolean isWaterTile(){
         return (tileType.equals(TileType.DARKWATER) || tileType.equals(TileType.WATER) ||tileType.equals(TileType.CLEARWATER));
     }
+
+    /**
+     * @param tile
+     * @return true si la tuile est connectable avec la tuile passée en paramètre (la voisine est une border de même layer et même type de tuile et qu'ils ont une direction en commun)
+     */
+    public boolean isConnectableWith(Tile tile){
+        return (tile.getCurrentTileBorder()!= Border.NOBORDER && tile.getLayer() == this.getLayer() && tile.getTileType() == this.getTileType() && directionInCommon(tile.getCurrentTileBorder()));
+    }
+
+
+
+    private boolean directionInCommon(Border other) {
+        if(other.containsDirection(this.getCurrentTileBorder().getFirst())){
+            return true;
+        }
+        if(other.containsDirection(this.getCurrentTileBorder().getSecond())){
+            return true;
+        }
+        return false;
+
+    }
+
+    public String toString(){
+        return "Tile : " + tileType + " Layer : " + layer + " Border : " + currentTileBorder;
+    }
+
 }

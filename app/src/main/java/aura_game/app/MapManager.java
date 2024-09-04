@@ -1,5 +1,6 @@
 package aura_game.app;
 
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MapManager {
@@ -9,6 +10,7 @@ public class MapManager {
     private PerlinNoiseV2 perlinNoise;
     private SaveManager saveManager;
     private SpriteBatch batch;
+    BitmapFont font;
 
     private Biome choosenBiome;
 
@@ -36,6 +38,9 @@ public class MapManager {
         this.mapSaver  = new MapSaver(tilesManager,nbTilesWidth,nbTilesHeight,tileSize );
         this.relief = choosenBiome.getRelief() ;
         coinsManager = new CoinsManager(nbTilesWidth, nbTilesHeight);
+        font = new BitmapFont();
+        font.getData().setScale(0.7f);
+        font.setColor(1, 0, 1, 1);
 
         initialiseMap(perlinNoise.getZ());
     }
@@ -76,6 +81,14 @@ public class MapManager {
         coinsManager.addCoinsToBorder(map);
         coinsManager.addCoinsToBorder(map);
         coinsManager.addCoinsToBorderModify(map);
+        coinsManager.connectUnConnectedBordersNeighbors(map);
+        coinsManager.addCoinsToBorderThatWasUnlinked(map);
+        //enlever toutes les bordures qui ne sont pas connectées des deux cotés
+        coinsManager.removeUnlinkedBorders(map,0);
+        coinsManager.addCoinsToBorder(map);
+        //coinsManager.checkIfAllBordersAreConnected(map);
+
+
 
     }
 
@@ -137,9 +150,12 @@ public class MapManager {
             for (int j = 0; j < nbTilesHeight; ++j) {
                 Tile currentTile = map[i][j];
                 tilesManager.drawTile(batch, currentTile, i * tileSize, j * tileSize);
+                //font.draw(batch, i + "," + j + ":\n"+currentTile.getLayer(), i * tileSize, (j+1) * tileSize);
+
             }
         }
 
     }
+
 
 }

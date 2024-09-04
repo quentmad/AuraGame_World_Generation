@@ -1,16 +1,8 @@
 
 
-package aura_game.app.GenerationMapS1;
+package aura_game.app.oldGenerationMapS1;
 
-import com.badlogic.gdx.math.Vector2;
-
-import aura_game.app.GenerationMapS1.MapGenerator;
 import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-
-import com.badlogic.gdx.graphics.Pixmap;
-import com.badlogic.gdx.graphics.PixmapIO;
 
 /**
  * Classe principale de l'application libGDX. Gère le cycle de vie du jeu, la mise à jour et le rendu graphique.

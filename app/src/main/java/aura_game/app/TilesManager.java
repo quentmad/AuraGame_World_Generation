@@ -7,7 +7,7 @@ public class TilesManager {
     private SpriteSheetInfo tilesTexture;
 
     public TilesManager(int TILE_SIZE){
-        this.tilesTexture = new SpriteSheetInfo(TILE_SIZE, "OFFICIAL_TILESET_test1-32_32_Lis");
+        this.tilesTexture = new SpriteSheetInfo(TILE_SIZE, "OFFICIAL_TILESET_test1-32_32_Lis - NUM");
     }
 
     public SpriteSheetInfo getTilesTexture() {

@@ -1,4 +1,4 @@
-package aura_game.app.GenerationMapS1;
+package aura_game.app.oldGenerationMapS1;
 
 /**
  * Classe fournissant des méthodes pour générer du bruit simplex en 2D, 3D et 4D.

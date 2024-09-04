@@ -1,4 +1,4 @@
-package aura_game.app.GenerationMapS1;
+package aura_game.app.oldGenerationMapS1;
 
 import java.util.Random;
 import com.badlogic.gdx.math.Vector2;
