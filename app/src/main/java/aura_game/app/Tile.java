@@ -44,21 +44,21 @@ public class Tile {
     private void initializeHashmap(){
         this.tiles = new HashMap<>();
         this.tiles.put(Border.NOBORDER, tileType.getTextureDefaultRandomIndex());
-        this.tiles.put(Border.TOP, tileType.getTopBorderIndex());
-        this.tiles.put(Border.RIGHT, tileType.getRightBorderIndex());
-        this.tiles.put(Border.LEFT, tileType.getLeftBorderIndex());
-        this.tiles.put(Border.BOTTOM, tileType.getBottomBorderIndex());
+        this.tiles.put(Border.BOTTOM, tileType.bottomIndex());
+        this.tiles.put(Border.LEFT, tileType.leftIndex());
+        this.tiles.put(Border.RIGHT, tileType.rightIndex());
+        this.tiles.put(Border.TOP, tileType.topIndex());
         //Coins out
-        this.tiles.put(Border.ORIGHT_BOTTOM, tileType.getORightBottomIndex());
-        this.tiles.put(Border.OBOTTOM_LEFT, tileType.getOBottomLeftIndex());
-        this.tiles.put(Border.ORIGHT_TOP, tileType.getORightTopIndex());
-        this.tiles.put(Border.OTOP_LEFT, tileType.getOTopLeftIndex());
+        this.tiles.put(Border.OUTLEFTTOP, tileType.outLeftTopIndex());
+        this.tiles.put(Border.OUTRIGHTTOP, tileType.outRightTopIndex());
+        this.tiles.put(Border.OUTLEFTBOTTOM, tileType.outleftBottomIndex());
+        this.tiles.put(Border.OUTRIGHTBOTTOM, tileType.outRightBottomIndex());
 
         //Coins out
-        this.tiles.put(Border.ILEFT_TOP, tileType.getiLeftTopIndex());
-        this.tiles.put(Border.ITOP_RIGHT, tileType.getiTopRightIndex());
-        this.tiles.put(Border.ILEFT_BOTTOM, tileType.getiLeftBottomIndex());
-        this.tiles.put(Border.IBOTTOM_RIGHT, tileType.getiBottomRightIndex());
+        this.tiles.put(Border.INRIGHTBOTTOM, tileType.inRightBottomIndex());
+        this.tiles.put(Border.INLEFTBOTTOM, tileType.inLeftBottomIndex());
+        this.tiles.put(Border.INRIGHTTOP, tileType.inRightTopIndex());
+        this.tiles.put(Border.INLEFTTOP, tileType.inLeftTopIndex());
 
     }
     public Pair<Integer, Integer> getTextureIndex(Border direction) {
@@ -89,24 +89,13 @@ public class Tile {
     }
 
     /**
-     * @param tile
-     * @return true si la tuile est connectable avec la tuile passée en paramètre (la voisine est une border de même layer et même type de tuile et qu'ils ont une direction en commun)
+     * @return true si la tuile est compatible avec la tuile passée en paramètre (même layer et même type de tuile)
      */
-    public boolean isConnectableWith(Tile tile){
-        return (tile.getCurrentTileBorder()!= Border.NOBORDER && tile.getLayer() == this.getLayer() && tile.getTileType() == this.getTileType() && directionInCommon(tile.getCurrentTileBorder()));
-    }
-
-
-
-    private boolean directionInCommon(Border other) {
-        if(other.containsDirection(this.getCurrentTileBorder().getFirst())){
-            return true;
+    public boolean isCompatibleWith(Tile other){
+        if(other.getTileType() != this.getTileType() ||other.getLayer() != this.getLayer()){
+            return false;
         }
-        if(other.containsDirection(this.getCurrentTileBorder().getSecond())){
-            return true;
-        }
-        return false;
-
+        return true;
     }
 
     public String toString(){

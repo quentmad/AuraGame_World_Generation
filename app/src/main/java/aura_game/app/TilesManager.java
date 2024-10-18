@@ -7,7 +7,7 @@ public class TilesManager {
     private SpriteSheetInfo tilesTexture;
 
     public TilesManager(int TILE_SIZE){
-        this.tilesTexture = new SpriteSheetInfo(TILE_SIZE, "OFFICIAL_TILESET_test1-32_32_Lis - NUM");
+        this.tilesTexture = new SpriteSheetInfo(TILE_SIZE, "OFFICIAL_TILESET_test1-32_32_Lis");// - NUM");
     }
 
     public SpriteSheetInfo getTilesTexture() {
@@ -35,6 +35,11 @@ public class TilesManager {
 
 
 
+    }
+
+    //Donne la tuile en fonction de la hauteur et du biome
+    public Tile getTile(Biome biome, int height){
+        return new Tile(biome.getTileType1(), height);
     }
 
 

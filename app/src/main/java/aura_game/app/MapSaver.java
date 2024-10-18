@@ -35,7 +35,8 @@ public class MapSaver {
                 Tile currentTile = tileset[x][y];
                 // Dessinez la tuile sur le Pixmap en fonction de sa position dans la map
                 Texture textureCurrentTile = tilesManager.getTilesTexture().spriteSheetRegions()[currentTile.getTextureIndexActual().getLeft()][currentTile.getTextureIndexActual().getRight()].getTexture();
-                Pixmap pixmapTile = ScreenUtils.getFrameBufferPixmap(0, 0, textureCurrentTile.getWidth(), textureCurrentTile.getHeight());
+                Pixmap pixmapTile = new Pixmap((Gdx.files.local("out/map_TESTgrass.png")));
+                        //Pixmap pixmapTile = ScreenUtils.getFrameBufferPixmap(0, 0, textureCurrentTile.getWidth(), textureCurrentTile.getHeight());
                 pixmap.drawPixmap(pixmapTile, x * tileSize, y * tileSize);
             }
         }

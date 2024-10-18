@@ -24,18 +24,15 @@ public class PerlinNoiseV2 {
      * Constructeur de la classe PerlinNoise.
      * Initialise la graine aléatoire et les paramètres de la génération du bruit.
      */
-    public PerlinNoiseV2(Biome choosenBiome) {
-        //seed = System.currentTimeMillis();
-        //rand = new Random(seed);
-        //z = rand.nextDouble();
-        z = Math.random();
-        //z = 0.8567405917242321;//0.49404996834057824;
+    public PerlinNoiseV2() {
+        z = Math.random(); //--> not used
+        //z = 0.44373291126825254;
         //System.out.println("random :" + z);
 
-        octaves = choosenBiome.getOctaves();
-        persistence = choosenBiome.getPersistence();
-        lacunarity = choosenBiome.getLacunarity();
-        scale = choosenBiome.getScale();
+        octaves = 2;
+        persistence = 0.5;
+        lacunarity = 2;
+        scale = 0.1;
         /*
         // Paramètres par défaut (à ajuster selon les besoins)
         octaves = 4;

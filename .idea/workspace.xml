@@ -8,8 +8,94 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="trying to finish coin setter">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapSaver.java" afterDir="false" />
+    <list default="true" id="252a8abc-2f5b-4ef5-969d-18bc253eb467" name="Changes" comment="trying to have a png maker">
+      <change afterPath="$PROJECT_DIR$/.idea/AuraGame_World_Generation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v09h33.05 - LAKES-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v09h37.21 - FOREST-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v09h38.39 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v09h43.37 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v09h44.15 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v09h55.14 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v09h58.39 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v10h00.23 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v10h10.18 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v10h36.20 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h09.23 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h15.53 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h17.19 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h23.09 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h23.25 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h24.46 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h25.43 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h26.34 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h28.00 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h28.29 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h30.48 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h39.51 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v11h45.03 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h04.53 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h23.09 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h26.04 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h28.41 - HIGHLANDS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h31.36 - BADLANDS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h33.06 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h35.29 - ISLAND-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v13h36.10 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v14h45.57 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h01.58 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h07.03 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h18.13 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h23.14 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h27.49 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h28.02 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h29.44 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h31.39 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h38.49 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h40.09 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h40.14 - SNOWY-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h41.33 - LAKES-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h52.43 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h56.20 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h57.35 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v15h59.40 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h04.33 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h09.32 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h19.20 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h22.03 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h26.23 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h38.54 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h42.43 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h45.01 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h53.06 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h54.22 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v16h56.50 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h00.19 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h02.44 - TUNDRA-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h03.28 - LAKES-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h05.19 - TUNDRA-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h06.45 - ISLAND-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h33.16 - JUNGLE-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h35.00 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h35.31 - LAKES-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h40.59 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h43.17 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h48.24 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h52.29 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h53.15 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v17h57.18 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h01.44 - LAKES-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h04.09 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h07.34 - LAKES-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h08.42 - LAKES-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h16.04 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h20.08 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h43.53 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h45.52 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/map_v18h47.09 - PLAINS-testCorrectionBorder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,18 +104,96 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/AuraGDX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Biome.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Biome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/GenerationMapS1/AuraGDXS1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/GenerationMapS1/MapGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/GenerationMapS1/PerlinNoise$Grad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/GenerationMapS1/PerlinNoise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/MapManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoise.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/PerlinNoiseV2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/S2/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/S2/PerlinNoise$Grad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/S2/PerlinNoise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/S2/World.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/S2/WorldDrawer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/SaveManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/SaveManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TileType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/aura_game/app/TilesManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/GenerationMapS2/GenerateurCarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/GenerationMapS2/PerlinNoise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/GenerationMapS2/TestGenerateurCarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/GenerationMapS2/TestGenerateurCarte2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/GenerationMapS2/Tuile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/GenerationMapS2/World.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/GenerationMapS2/WorldDrawer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/java/otherTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/Assets/SpriteSheets/MazeTileset/MazeTileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/Assets/SpriteSheets/MazeTileset/MazeTileset.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/Assets/SpriteSheets/PunyWorld/punyworld-overworld-tileset-perlin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/Assets/SpriteSheets/PunyWorld/punyworld-overworld-tileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/Assets/SpriteSheets/kenney_tinyDungeon/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/Assets/SpriteSheets/kenney_tinyDungeon/Tilemap/tilemap_packed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/AldousBroder/AldousBroder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/AldousBroder/AldousBroder.pyproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/AldousBroder/aldous_broder_maze.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/BinaryTree/BinaryTree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/BinaryTree/BinaryTree.pyproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/BinaryTree/binary_tree_maze.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/Common/cell.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/Common/maze.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/Common/maze_drawer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/HuntAndKill/HuntAndKill.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/HuntAndKill/HuntAndKill.pyproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/HuntAndKill/hunt_and_kill_maze.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/MazeAlgorithms/MazeAlgorithms.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/PerlinNoise/PerlinNoise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/PerlinNoise/PerlinNoise.pyproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/PerlinNoise/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/PerlinNoise/test_generate_world.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/PerlinNoise/world.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/PerlinNoise/world_drawer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WaveFunctionCollapse/ClassDrawWorld.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WaveFunctionCollapse/ClassStack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WaveFunctionCollapse/ClassTile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WaveFunctionCollapse/ClassWorld.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WaveFunctionCollapse/Config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WaveFunctionCollapse/WaveFunctionCollapse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WaveFunctionCollapse/WaveFunctionCollapse.pyproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/TUTO/python/WorldGeneration/WorldGeneration.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/AuraGDX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Biome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Border.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Border.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/CoinsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/CoinsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/MapSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/PerlinNoiseV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/S2/Main.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/SaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/SaveManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TileType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/aura_game/app/TilesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/oldGenerationMapS1/AuraGDXS1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/oldGenerationMapS1/MapGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/oldGenerationMapS1/PerlinNoise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/oldS2/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/oldS2/PerlinNoise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/oldS2/World.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/aura_game/app/oldS2/WorldDrawer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/build/libs/Aura_Game-build-logic.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/build/libs/Aura_Game-build-logic.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/build/libs/list.jar" beforeDir="false" afterPath="$PROJECT_DIR$/list/build/libs/list.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid22580.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid23092.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid7064.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/build/libs/utilities.jar" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/build/libs/utilities.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +236,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;quentmad&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/quentmad/AuraGame_World_Generation.git&quot;,
+    &quot;accountId&quot;: &quot;fbbec304-1bb7-4fd7-85b7-aef00a5cc533&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -83,12 +259,16 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2a8BcMOH9eKt2BSP7sHyGExNPoK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Gradle.Aura_Game [./gradle run].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Aura_Game [./gradlew run].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Aura_Game [.gradle run].executor&quot;: &quot;Run&quot;,
@@ -98,7 +278,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/quent/Documents/Code/LemmingGame/lemmingsgame_multithreads&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/quent/Documents/Code/Java/AuraGame_World_Generation&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.30689654&quot;,
@@ -154,13 +334,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-f644763e9732-1e16d6ec" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -267,7 +440,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706286619746</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="trying to have a png maker">
+      <option name="closed" value="true" />
+      <created>1706372604708</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706372604708</updated>
+    </task>
+    <task id="LOCAL-00014" summary="trying to have a png maker">
+      <option name="closed" value="true" />
+      <created>1725435151006</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725435151006</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -285,6 +474,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="changement vers intellij" />
     <MESSAGE value="Code plus propre..." />
     <MESSAGE value="Code plus propre, ajout de la souris" />
@@ -297,6 +487,7 @@
     <MESSAGE value="23 01" />
     <MESSAGE value="save before 2401" />
     <MESSAGE value="trying to finish coin setter" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to finish coin setter" />
+    <MESSAGE value="trying to have a png maker" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to have a png maker" />
   </component>
 </project>

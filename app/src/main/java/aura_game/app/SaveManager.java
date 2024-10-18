@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.PixmapIO;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.utils.ScreenUtils;
 
@@ -22,7 +21,7 @@ public class SaveManager {
         frameBuffer = new FrameBuffer(Pixmap.Format.RGBA8888, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), false);
     }
 
-    public void saveImage(Biome biome, int width, int height, Tile[][] tileset, int tileSize) {
+    public void saveImage(int width, int height, Tile[][] tileset, int tileSize) {
         // Capturer l'écran dans un Pixmap à partir du FrameBuffer
         //Pixmap pixmap = captureScreen(width, height);
         Pixmap pixmap = new Pixmap(width, height, Pixmap.Format.RGBA8888);
@@ -37,7 +36,7 @@ public class SaveManager {
         }
 
         // Enregistrer le Pixmap en tant qu'image PNG
-        PixmapIO.writePNG(Gdx.files.local("out/map_v" + getCurrentTime() + " - " + biome.getName() + "-testCorrectionBorder.png"), pixmap);
+        PixmapIO.writePNG(Gdx.files.local("out/map_v" + getCurrentTime() + " - + -testCorrectionBorder.png"), pixmap);
 
         // Libérer la mémoire du Pixmap
         pixmap.dispose();
